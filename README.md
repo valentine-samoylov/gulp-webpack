@@ -8,8 +8,8 @@
 - Source-maps for CSS and JS files (**Dev mode**)
 - Conversion of fonts from TTF to WOFF and WOFF2 formats
 - Automatically connect fonts to the project with ***font-face*** (fonts must have a name like: **Roboto-Regular.ttf**).
-- Image optimization
-- SVG minification and merging into SVG Sprites
+- Images optimization
+- SVG files minification and merging into SVG Sprites
 
 ## NPM Scripts
 
