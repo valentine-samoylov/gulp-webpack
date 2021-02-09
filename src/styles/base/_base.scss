@@ -1,0 +1,36 @@
+html,
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+// ul[class],
+// ol[class],
+// li[class]
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background-color: $white;
+	font-size: 15px;
+	line-height: 1.5;
+
+	&.lock {
+		overflow: hidden;
+	}
+}

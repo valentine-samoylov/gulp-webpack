@@ -1,0 +1,22 @@
+// Abstracts (Vars, mixins, functions)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Vendors
+@import "vendor/vendor";
+
+// Base
+@import "base/base";
+@import "base/fonts";
+@import "base/helpers";
+
+// Components
+@import "components/logo";
+@import "components/btn";
+
+// Layout-related sections
+@import "layout/header";
+@import "layout/footer";
+
+// Page-specific styles
+@import "pages/index-page/index-page";
