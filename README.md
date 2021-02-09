@@ -1,5 +1,6 @@
 # Gulp + Webpack
-Some features:
+
+## Some features
 - HTML blocks
 - SCSS preprocessor
 - Webpack for building ES Modules
@@ -10,12 +11,12 @@ Some features:
 - Optimise images
 - Minify SVGs and combine them into SVG sprites
 
-## **NPM Scripts**
+## NPM Scripts
 
 **Dev Mode:** `$ npm run dev` or `$ gulp`
 
 **Build Mode:** `$ npm run build`
 
-## **Libraries**
+## Libraries
 - CSS libraries imported using SASS imports directly from **node_modules** folder
 - JS libraries imported as ES modules
