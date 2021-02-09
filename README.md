@@ -1,4 +1,4 @@
-# Gulp + Webpack
+# Gulp + Webpack Starter
 
 ## Some features
 - HTML blocks
