@@ -2,14 +2,14 @@
 
 ## Some features
 - HTML blocks
-- SCSS preprocessor
+- SASS(SCSS) preprocessor
 - Webpack for building ES Modules
-- Babel transpiler to support modern JavaScript (ES6) in browsers
-- Source-maps for CSS and JS files (Dev mode)
-- Convert fonts from TTF to WOFF and WOFF2 font formats
-- Automatic connect them to the project using ***font-face*** (fonts must have name like this: **Roboto-Regular.ttf**)
-- Optimise images
-- Minify SVGs and combine them into SVG sprites
+- Babel transpiller to support modern JavaScript (ES6) in browsers
+- Source-maps for CSS and JS files (**Dev mode**)
+- Conversion of fonts from TTF to WOFF and WOFF2 formats
+- Automatically connect fonts to the project with ***font-face*** (fonts must have a name like: **Roboto-Regular.ttf**).
+- Image optimization
+- SVG minification and merging into SVG Sprites
 
 ## NPM Scripts
 
