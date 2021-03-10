@@ -2,35 +2,47 @@ html,
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	width: 100%;
-	height: 100%;
+  height: 100%;
 }
 
-a {
-	text-decoration: none;
-}
-
-// ul[class],
-// ol[class],
-// li[class]
-ul,
-li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-	background-color: $white;
-	font-size: 15px;
-	line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  font-family: $default-font;
+  line-height: 1.2;
+  overflow-x: hidden;
 
-	&.lock {
-		overflow: hidden;
-	}
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  fill: currentColor;
 }
