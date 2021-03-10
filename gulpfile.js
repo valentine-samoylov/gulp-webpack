@@ -36,27 +36,27 @@ const path = {
     src: ['./src/views/pages/*.html',
       '!./src/views/**/_*.html'
     ],
-    dist: "./app",
+    dist: "./dist",
     watch: './src/views/**/*.html',
   },
   styles: {
     src: './src/styles/main.{scss,sass}',
-    dist: './app/styles/',
+    dist: './dist/styles/',
     watch: './src/styles/**/*.{scss,sass}',
   },
   scripts: {
     src: './src/js/main.js',
-    dist: './app/js',
+    dist: './dist/js',
     watch: './src/js/**/*.js',
   },
   resources: {
     src: './src/resources/**',
-    dist: './app',
+    dist: './dist',
     watch: './src/resources/**',
   },
   fonts: {
     src: './src/fonts/**.ttf',
-    dist: './app/fonts/',
+    dist: './dist/fonts/',
     watch: './src/fonts/**.ttf',
   },
   images: {
@@ -64,12 +64,12 @@ const path = {
       './src/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
       '!./src/images/sprites/**'
     ],
-    dist: './app/images',
+    dist: './dist/images',
     watch: './src/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp}',
   },
   sprites: {
     src: './src/images/sprites/**.svg',
-    dist: './app/images/',
+    dist: './dist/images/',
     watch: './src/images/sprites/**.svg',
   }
 };
@@ -197,13 +197,13 @@ const checkWeight = (fontname) => {
 const cb = () => {}
 
 let srcFonts = './src/styles/base/_fonts.scss';
-let appFonts = './app/fonts/';
+let distFonts = './dist/fonts/';
 
 const fontStyle = (done) => {
   let file_content = fs.readFileSync(srcFonts);
 
   fs.writeFile(srcFonts, '', cb);
-  fs.readdir(appFonts, function (err, items) {
+  fs.readdir(distFonts, function (err, items) {
     if (items) {
       let c_fontname;
       for (var i = 0; i < items.length; i++) {
@@ -286,14 +286,14 @@ const onError = function (err) {
 
 // Clean
 const clean = () => {
-  return del(['app/*'])
+  return del(['dist/*'])
 }
 
 // Watch files
 const watchFiles = (cb) => {
   browserSync.init({
     server: {
-      baseDir: "./app"
+      baseDir: "./dist"
     },
     port: 3000,
     notify: false
@@ -317,6 +317,7 @@ exports.views = views;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.fonts = fonts;
+exports.fontStyle = fontStyle;
 exports.watchFiles = watchFiles;
 
 exports.default = series(clean, parallel(views, scripts, fonts, resources, images, sprites), fontStyle, styles, watchFiles);
