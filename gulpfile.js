@@ -286,7 +286,7 @@ const onError = function (err) {
 
 // Clean
 const clean = () => {
-  return del(['dist/*'])
+  return del(['./dist'])
 }
 
 // Watch files
